@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Story | Tiny Flames - Hand-Poured Candle Makers</title>
+    <meta name="description" content="Discover the story behind Tiny Flames. From a small kitchen experiment to your favorite custom candle brand.">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-section {
+            background: linear-gradient(rgba(44, 24, 16, 0.7), rgba(44, 24, 16, 0.7)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23d4a373" width="1200" height="600"/></svg>');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 120px 20px;
+        }
+
+        .hero-section h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero-section p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        .story-content {
+            max-width: 800px;
+            margin: 80px auto;
+            padding: 0 20px;
+        }
+
+        .story-section {
+            margin-bottom: 60px;
+        }
+
+        .story-section h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            color: #2c1810;
+            margin-bottom: 20px;
+        }
+
+        .story-section p {
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+        }
+
+        .value-card {
+            text-align: center;
+            padding: 30px 20px;
+            background: #f9f5f0;
+            border-radius: 8px;
+        }
+
+        .value-card i {
+            font-size: 2.5rem;
+            color: #d4a373;
+            margin-bottom: 20px;
+        }
+
+        .value-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #2c1810;
+        }
+
+        .value-card p {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .team-section {
+            background: #f9f5f0;
+            padding: 80px 20px;
+            margin-top: 60px;
+        }
+
+        .team-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .team-section h2 {
+            text-align: center;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: #2c1810;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .team-member {
+            text-align: center;
+        }
+
+        .member-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: #fff;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #d4a373;
+            font-size: 3rem;
+            overflow: hidden;
+        }
+
+        .team-member h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            color: #2c1810;
+            margin-bottom: 5px;
+        }
+
+        .team-member .role {
+            color: #d4a373;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .team-member p {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .cta-section {
+            background: #2c1810;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .cta-section h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+
+        .btn-light {
+            display: inline-block;
+            padding: 15px 40px;
+            background: white;
+            color: #2c1810;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: transform 0.3s;
+        }
+
+        .btn-light:hover {
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="announcement-bar">
+            <p>🕯️ Free Shipping on Orders Over $50 | Use Code: FLAME10 for 10% Off</p>
+        </div>
+        <nav class="navbar">
+            <div class="container nav-container">
+                <div class="logo">
+                    <a href="../index.html">Tiny<span>Flames</span></a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="shop.html">Shop All</a></li>
+                    <li><a href="gifts.html">Gifts</a></li>
+                    <li><a href="customize.html">Customize</a></li>
+                    <li><a href="wedding-corporate.html">Weddings & Corporate</a></li>
+                    <li><a href="our-story.html" class="active">Our Story</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <button class="icon-btn"><i class="fas fa-search"></i></button>
+                    <button class="icon-btn cart-trigger"><i class="fas fa-shopping-bag"></i><span class="cart-count">0</span></button>
+                    <button class="hamburger"><i class="fas fa-bars"></i></button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero-section">
+        <h1>Our Story</h1>
+        <p>From a small kitchen experiment to lighting up homes across the country.</p>
+    </section>
+
+    <!-- Story Content -->
+    <main class="story-content">
+        <div class="story-section">
+            <h2>The Beginning</h2>
+            <p>Tiny Flames started in 2018 when our founder, Sarah Chen, couldn't find a candle that truly captured the warmth of her grandmother's home. Frustrated by mass-produced options filled with synthetic fragrances and parabens, she decided to create her own.</p>
+            <p>What began as weekend experiments in her Brooklyn kitchen quickly turned into a passion project. After months of perfecting her soy wax blend and sourcing natural essential oils, Sarah poured her first batch of candles for friends and family. The response was overwhelming.</p>
+            <p>By 2019, Tiny Flames had grown from kitchen batches to a small studio in Queens, where a team of three artisans hand-poured every single candle. Today, we're proud to serve thousands of customers who value quality, customization, and sustainability.</p>
+        </div>
+
+        <div class="values-grid">
+            <div class="value-card">
+                <i class="fas fa-leaf"></i>
+                <h3>Natural Ingredients</h3>
+                <p>100% soy wax, cotton wicks, and premium fragrance oils. Never parabens, phthalates, or synthetic dyes.</p>
+            </div>
+            <div class="value-card">
+                <i class="fas fa-hand-holding-heart"></i>
+                <h3>Hand-Poured</h3>
+                <p>Every candle is crafted by hand in small batches to ensure quality and attention to detail.</p>
+            </div>
+            <div class="value-card">
+                <i class="fas fa-paw"></i>
+                <h3>Cruelty-Free</h3>
+                <p>We never test on animals and are certified by Leaping Bunny.</p>
+            </div>
+            <div class="value-card">
+                <i class="fas fa-recycle"></i>
+                <h3>Sustainable</h3>
+                <p>Eco-friendly packaging and a candle recycling program to minimize our environmental impact.</p>
+            </div>
+        </div>
+
+        <div class="story-section">
+            <h2>Why Customization Matters</h2>
+            <p>We believe that candles are more than just home decor—they're memories waiting to be created. That's why we pioneered our custom label program, allowing you to personalize every candle for birthdays, weddings, corporate events, or just because.</p>
+            <p>Whether it's adding a loved one's name, a special date, or a meaningful message, we want your Tiny Flames candle to tell your story. Over 50,000 custom candles have been created since we launched this feature in 2020.</p>
+        </div>
+    </main>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="team-container">
+            <h2>Meet the Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-photo"><i class="fas fa-user"></i></div>
+                    <h3>Sarah Chen</h3>
+                    <p class="role">Founder & CEO</p>
+                    <p>Former chemist turned candle artist. Sarah leads product development and ensures every scent meets our high standards.</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo"><i class="fas fa-user"></i></div>
+                    <h3>Marcus Johnson</h3>
+                    <p class="role">Head of Production</p>
+                    <p>Marcus oversees our studio operations and has perfected the art of hand-pouring over 100,000 candles.</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo"><i class="fas fa-user"></i></div>
+                    <h3>Emma Rodriguez</h3>
+                    <p class="role">Creative Director</p>
+                    <p>Emma designs our labels, packaging, and brings fresh ideas to our seasonal collections.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Ready to Find Your Perfect Scent?</h2>
+        <p>Explore our collection of hand-poured candles or create a custom one that tells your story.</p>
+        <a href="shop.html" class="btn-light">Shop Now</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h3>Tiny<span>Flames</span></h3>
+                <p>Hand-poured memories in every jar.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="shop.html">All Candles</a></li>
+                    <li><a href="gifts.html">Gift Sets</a></li>
+                    <li><a href="customize.html">Custom Candles</a></li>
+                    <li><a href="wedding-corporate.html">Bulk Orders</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Help</h4>
+                <ul>
+                    <li><a href="shipping.html">Shipping Info</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="#">Track Order</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Join the Club</h4>
+                <p>Get 15% off your first order + exclusive access to new scents.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="container copyright">
+            <p>&copy; 2024 Tiny Flames. All rights reserved.</p>
+            <div class="legal-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="#" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipping Information | Tiny Flames</title>
+    <meta name="description" content="Learn about Tiny Flames shipping options, delivery times, international shipping, and tracking your order.">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .shipping-hero {
+            background: #f9f5f0;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .shipping-hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            color: #2c1810;
+            margin-bottom: 15px;
+        }
+
+        .shipping-hero p {
+            color: #666;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .shipping-content {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .info-section {
+            margin-bottom: 50px;
+        }
+
+        .info-section h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            color: #2c1810;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0e6dd;
+        }
+
+        .info-section h3 {
+            font-size: 1.2rem;
+            color: #2c1810;
+            margin: 25px 0 15px;
+        }
+
+        .info-section p {
+            line-height: 1.8;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .shipping-rates {
+            background: #f9f5f0;
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 25px 0;
+        }
+
+        .rate-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            padding: 20px;
+            border-bottom: 1px solid #e8ddd4;
+        }
+
+        .rate-row:last-child {
+            border-bottom: none;
+        }
+
+        .rate-row.header {
+            background: #2c1810;
+            color: white;
+            font-weight: 600;
+        }
+
+        .rate-row div {
+            padding: 0 10px;
+        }
+
+        .delivery-map {
+            background: #f9f5f0;
+            padding: 40px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+
+        .delivery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+
+        .delivery-card {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .delivery-card i {
+            font-size: 2.5rem;
+            color: #d4a373;
+            margin-bottom: 15px;
+        }
+
+        .delivery-card h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            color: #2c1810;
+            margin-bottom: 10px;
+        }
+
+        .delivery-card p {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .tracking-box {
+            background: #2c1810;
+            color: white;
+            padding: 40px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .tracking-box h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .tracking-box p {
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 25px;
+        }
+
+        .tracking-form {
+            display: flex;
+            gap: 10px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .tracking-form input {
+            flex: 1;
+            padding: 12px 15px;
+            border: none;
+            border-radius: 4px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .tracking-form button {
+            padding: 12px 25px;
+            background: #d4a373;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .tracking-form button:hover {
+            background: #bc8a5f;
+        }
+
+        .policy-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+        }
+
+        .policy-table th,
+        .policy-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #e8ddd4;
+        }
+
+        .policy-table th {
+            background: #f9f5f0;
+            color: #2c1810;
+            font-weight: 600;
+        }
+
+        .policy-table tr:hover {
+            background: #f9f5f0;
+        }
+
+        .cta-section {
+            background: #f9f5f0;
+            padding: 50px 20px;
+            text-align: center;
+            margin-top: 50px;
+            border-radius: 8px;
+        }
+
+        .cta-section h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: #2c1810;
+            margin-bottom: 15px;
+        }
+
+        .cta-section p {
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #d4a373;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .btn-primary:hover {
+            background: #bc8a5f;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="announcement-bar">
+            <p>🕯️ Free Shipping on Orders Over $50 | Use Code: FLAME10 for 10% Off</p>
+        </div>
+        <nav class="navbar">
+            <div class="container nav-container">
+                <div class="logo">
+                    <a href="../index.html">Tiny<span>Flames</span></a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="shop.html">Shop All</a></li>
+                    <li><a href="gifts.html">Gifts</a></li>
+                    <li><a href="customize.html">Customize</a></li>
+                    <li><a href="wedding-corporate.html">Weddings & Corporate</a></li>
+                    <li><a href="our-story.html">Our Story</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <button class="icon-btn"><i class="fas fa-search"></i></button>
+                    <button class="icon-btn cart-trigger"><i class="fas fa-shopping-bag"></i><span class="cart-count">0</span></button>
+                    <button class="hamburger"><i class="fas fa-bars"></i></button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="shipping-hero">
+        <h1>Shipping Information</h1>
+        <p>Everything you need to know about getting your candles delivered safely and quickly.</p>
+    </section>
+
+    <!-- Content -->
+    <main class="shipping-content">
+        <!-- Processing Times -->
+        <div class="info-section">
+            <h2>Order Processing</h2>
+            <p>All orders are carefully hand-packed at our Brooklyn studio. Here's what to expect:</p>
+            
+            <div class="delivery-grid">
+                <div class="delivery-card">
+                    <i class="fas fa-box-open"></i>
+                    <h4>Standard Orders</h4>
+                    <p>Processed within 1-2 business days</p>
+                </div>
+                <div class="delivery-card">
+                    <i class="fas fa-pencil-alt"></i>
+                    <h4>Custom Candles</h4>
+                    <p>Processed within 2-3 business days</p>
+                </div>
+                <div class="delivery-card">
+                    <i class="fas fa-gift"></i>
+                    <h4>Bulk Orders</h4>
+                    <p>Processed within 3-5 business days</p>
+                </div>
+            </div>
+
+            <p style="margin-top: 20px;"><strong>Note:</strong> During peak seasons (November-December), processing may take an additional 1-2 business days. We'll notify you of any significant delays via email.</p>
+        </div>
+
+        <!-- Shipping Rates -->
+        <div class="info-section">
+            <h2>Shipping Rates & Delivery Times</h2>
+            <p>We offer several shipping options to meet your needs:</p>
+            
+            <div class="shipping-rates">
+                <div class="rate-row header">
+                    <div>Shipping Method</div>
+                    <div>Delivery Time</div>
+                    <div>Cost</div>
+                </div>
+                <div class="rate-row">
+                    <div>Standard Shipping</div>
+                    <div>3-5 Business Days</div>
+                    <div>$5.95 (Free over $50)</div>
+                </div>
+                <div class="rate-row">
+                    <div>Express Shipping</div>
+                    <div>1-2 Business Days</div>
+                    <div>$12.95</div>
+                </div>
+                <div class="rate-row">
+                    <div>Overnight Shipping</div>
+                    <div>Next Business Day</div>
+                    <div>$24.95</div>
+                </div>
+            </div>
+
+            <p><strong>Free Shipping:</strong> Enjoy free standard shipping on all orders over $50 within the continental United States.</p>
+        </div>
+
+        <!-- International Shipping -->
+        <div class="info-section">
+            <h2>International Shipping</h2>
+            <p>We're proud to ship Tiny Flames candles worldwide! International orders are shipped via DHL Express.</p>
+            
+            <div class="delivery-map">
+                <h3>Regional Delivery Estimates</h3>
+                <div class="delivery-grid">
+                    <div class="delivery-card">
+                        <i class="fas fa-flag-usa"></i>
+                        <h4>Canada</h4>
+                        <p>5-8 Business Days<br>$15.00 USD</p>
+                    </div>
+                    <div class="delivery-card">
+                        <i class="fas fa-ship"></i>
+                        <h4>United Kingdom</h4>
+                        <p>7-10 Business Days<br>$25.00 USD</p>
+                    </div>
+                    <div class="delivery-card">
+                        <i class="fas fa-globe-europe"></i>
+                        <h4>Europe (EU)</h4>
+                        <p>7-12 Business Days<br>$28.00 USD</p>
+                    </div>
+                    <div class="delivery-card">
+                        <i class="fas fa-plane"></i>
+                        <h4>Australia</h4>
+                        <p>10-14 Business Days<br>$32.00 USD</p>
+                    </div>
+                </div>
+            </div>
+
+            <p><strong>Important:</strong> International customers are responsible for any customs duties, taxes, or fees imposed by their country. These charges are not included in the shipping cost.</p>
+        </div>
+
+        <!-- Tracking -->
+        <div class="info-section">
+            <h2>Track Your Order</h2>
+            <p>Once your order ships, you'll receive an email with a tracking number. You can also use the form below to track your package:</p>
+            
+            <div class="tracking-box">
+                <h3>Track Your Package</h3>
+                <p>Enter your order number to check the status of your shipment.</p>
+                <form class="tracking-form" onsubmit="event.preventDefault(); alert('Tracking feature coming soon!');">
+                    <input type="text" placeholder="Order Number (e.g., #TF12345)">
+                    <button type="submit">Track</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Shipping Policies -->
+        <div class="info-section">
+            <h2>Shipping Policies</h2>
+            
+            <table class="policy-table">
+                <thead>
+                    <tr>
+                        <th>Topic</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Shipping Address</strong></td>
+                        <td>Please double-check your address at checkout. We're not responsible for orders shipped to incorrect addresses provided by the customer.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Address Changes</strong></td>
+                        <td>Contact us within 2 hours of ordering to request an address change. Once shipped, address changes cannot be made.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Damaged Packages</strong></td>
+                        <td>If your order arrives damaged, contact us within 48 hours with photos. We'll send a replacement immediately.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Lost Packages</strong></td>
+                        <td>If tracking shows delivered but you haven't received your order, contact us after 48 hours. We'll investigate with the carrier.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Signature Required</strong></td>
+                        <td>Orders over $150 require a signature upon delivery for security.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Special Requests -->
+        <div class="info-section">
+            <h2>Special Shipping Requests</h2>
+            <p>Need something specific? We're happy to accommodate:</p>
+            <ul style="line-height: 2; color: #666;">
+                <li><strong>Gift Messages:</strong> Add a personalized note at checkout (free of charge)</li>
+                <li><strong>Gift Wrapping:</strong> Premium gift wrapping available for $5 per item</li>
+                <li><strong>Scheduled Delivery:</strong> Request a specific delivery date for an additional $10</li>
+                <li><strong>Blind Shipping:</strong> We can ship without pricing information for corporate gifts</li>
+            </ul>
+            <p style="margin-top: 15px;">Contact our support team at <a href="mailto:support@tinyflames.com" style="color: #d4a373;">support@tinyflames.com</a> for special requests.</p>
+        </div>
+    </main>
+
+    <!-- CTA Section -->
+    <div class="shipping-content">
+        <div class="cta-section">
+            <h3>Have More Questions?</h3>
+            <p>Our customer service team is here to help with any shipping inquiries.</p>
+            <a href="contact.html" class="btn-primary">Contact Us</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h3>Tiny<span>Flames</span></h3>
+                <p>Hand-poured memories in every jar.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="shop.html">All Candles</a></li>
+                    <li><a href="gifts.html">Gift Sets</a></li>
+                    <li><a href="customize.html">Custom Candles</a></li>
+                    <li><a href="wedding-corporate.html">Bulk Orders</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Help</h4>
+                <ul>
+                    <li><a href="shipping.html">Shipping Info</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="#">Track Order</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Join the Club</h4>
+                <p>Get 15% off your first order + exclusive access to new scents.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="container copyright">
+            <p>&copy; 2024 Tiny Flames. All rights reserved.</p>
+            <div class="legal-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="#" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
