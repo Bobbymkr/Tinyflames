@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop All Candles — Tiny Flames</title>
+    <meta name="description" content="Browse our collection of handcrafted, customizable candles. Find the perfect scent for every moment.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar" id="announcementBar">
+        <div class="announcement-slider">
+            <span class="announcement-item active">Free shipping in India on orders above ₹999</span>
+            <span class="announcement-item">International delivery to 25+ countries</span>
+            <span class="announcement-item">Made-to-order. 3–5 days. Worth the wait.</span>
+        </div>
+        <button class="announcement-close" aria-label="Close announcement">&times;</button>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <button class="mobile-menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <a href="../index.html" class="logo">
+                <span class="logo-text">Tiny Flames</span>
+            </a>
+            
+            <ul class="nav-menu desktop-only">
+                <li><a href="shop.html" class="active">Shop All</a></li>
+                <li><a href="customize.html">Customize</a></li>
+                <li><a href="gifts.html">Gifts</a></li>
+                <li><a href="wedding-corporate.html">Wedding & Corporate</a></li>
+                <li><a href="our-story.html">Our Story</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            
+            <div class="nav-actions">
+                <button class="nav-icon" aria-label="Search">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </button>
+                <button class="nav-icon" aria-label="Account">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </button>
+                <button class="nav-icon cart-icon" aria-label="Cart">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span class="cart-count">0</span>
+                </button>
+                <div class="currency-selector desktop-only">
+                    <select id="currencySelect" aria-label="Select currency">
+                        <option value="INR">₹ INR</option>
+                        <option value="USD">$ USD</option>
+                        <option value="GBP">£ GBP</option>
+                        <option value="AED">د.إ AED</option>
+                    </select>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <span class="logo-text">Tiny Flames</span>
+            <button class="mobile-menu-close" aria-label="Close menu">&times;</button>
+        </div>
+        <ul class="mobile-nav-menu">
+            <li><a href="shop.html" class="active">Shop All</a></li>
+            <li><a href="customize.html">Customize</a></li>
+            <li><a href="gifts.html">Gifts</a></li>
+            <li><a href="wedding-corporate.html">Wedding & Corporate</a></li>
+            <li><a href="our-story.html">Our Story</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <!-- Collection Header -->
+        <section class="collection-header section">
+            <div class="container">
+                <nav class="breadcrumbs">
+                    <a href="../index.html">Home</a>
+                    <span class="breadcrumb-separator">/</span>
+                    <span class="breadcrumb-current">Shop All</span>
+                </nav>
+                <h1 class="collection-title">All Candles</h1>
+                <p class="collection-description">Handcrafted candles made with love. Each candle is poured in small batches and can be personalized with names, messages, or photos.</p>
+                <p class="product-count"><strong>24 products</strong></p>
+            </div>
+        </section>
+
+        <!-- Filters and Products -->
+        <section class="shop-section section">
+            <div class="container">
+                <div class="shop-layout">
+                    <!-- Filter Sidebar -->
+                    <aside class="filter-sidebar">
+                        <button class="filter-toggle mobile-only">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="4" y1="21" x2="4" y2="14"></line>
+                                <line x1="4" y1="10" x2="4" y2="3"></line>
+                                <line x1="12" y1="21" x2="12" y2="12"></line>
+                                <line x1="12" y1="8" x2="12" y2="3"></line>
+                                <line x1="20" y1="21" x2="20" y2="16"></line>
+                                <line x1="20" y1="12" x2="20" y2="3"></line>
+                                <line x1="1" y1="14" x2="7" y2="14"></line>
+                                <line x1="9" y1="8" x2="15" y2="8"></line>
+                                <line x1="17" y1="16" x2="23" y2="16"></line>
+                            </svg>
+                            Filters
+                        </button>
+
+                        <div class="filter-content" id="filterContent">
+                            <div class="filter-header">
+                                <h3>Filters</h3>
+                                <button class="clear-filters">Clear All</button>
+                            </div>
+
+                            <!-- Price Filter -->
+                            <div class="filter-group">
+                                <h4>Price</h4>
+                                <div class="price-range">
+                                    <input type="range" id="priceMin" min="0" max="5000" value="0">
+                                    <input type="range" id="priceMax" min="0" max="5000" value="5000">
+                                    <div class="price-display">
+                                        <span>₹0</span>
+                                        <span>—</span>
+                                        <span>₹5000</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Occasion Filter -->
+                            <div class="filter-group">
+                                <h4>Occasion</h4>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="occasion" value="birthday">
+                                    <span>Birthday</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="occasion" value="anniversary">
+                                    <span>Anniversary</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="occasion" value="wedding">
+                                    <span>Wedding</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="occasion" value="housewarming">
+                                    <span>Housewarming</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="occasion" value="just-because">
+                                    <span>Just Because</span>
+                                </label>
+                            </div>
+
+                            <!-- Scent Family Filter -->
+                            <div class="filter-group">
+                                <h4>Scent Family</h4>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="scent" value="floral">
+                                    <span>Floral</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="scent" value="woody">
+                                    <span>Woody</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="scent" value="citrus">
+                                    <span>Citrus</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="scent" value="fresh">
+                                    <span>Fresh</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="scent" value="sweet">
+                                    <span>Sweet</span>
+                                </label>
+                            </div>
+
+                            <!-- Candle Type Filter -->
+                            <div class="filter-group">
+                                <h4>Candle Type</h4>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="type" value="jar">
+                                    <span>Jar Candle</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="type" value="pillar">
+                                    <span>Pillar Candle</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="type" value="tea-light">
+                                    <span>Tea Light</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="type" value="gift-box">
+                                    <span>Gift Box Set</span>
+                                </label>
+                            </div>
+
+                            <!-- Customization Filter -->
+                            <div class="filter-group">
+                                <h4>Customization</h4>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="custom" value="name">
+                                    <span>Name Personalization</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="custom" value="message">
+                                    <span>Message Personalization</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="custom" value="photo">
+                                    <span>Photo Personalization</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="custom" value="gift-box">
+                                    <span>Gift Box Available</span>
+                                </label>
+                            </div>
+
+                            <!-- Burn Time Filter -->
+                            <div class="filter-group">
+                                <h4>Burn Time</h4>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="burn" value="short">
+                                    <span>15-20 hours</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="burn" value="medium">
+                                    <span>20-30 hours</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="burn" value="long">
+                                    <span>30+ hours</span>
+                                </label>
+                            </div>
+
+                            <button class="apply-filters mobile-only">Apply Filters</button>
+                        </div>
+                    </aside>
+
+                    <!-- Product Grid -->
+                    <div class="shop-content">
+                        <!-- Sort and View Options -->
+                        <div class="shop-toolbar">
+                            <div class="sort-options">
+                                <label for="sortBy">Sort by:</label>
+                                <select id="sortBy">
+                                    <option value="featured">Featured</option>
+                                    <option value="newest">Newest</option>
+                                    <option value="bestselling">Best Selling</option>
+                                    <option value="price-low">Price: Low to High</option>
+                                    <option value="price-high">Price: High to Low</option>
+                                    <option value="fastest">Fastest Delivery</option>
+                                </select>
+                            </div>
+                            <button class="view-toggle">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="3" width="7" height="7"></rect>
+                                    <rect x="14" y="3" width="7" height="7"></rect>
+                                    <rect x="14" y="14" width="7" height="7"></rect>
+                                    <rect x="3" y="14" width="7" height="7"></rect>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <!-- Products Grid -->
+                        <div class="product-grid shop-grid">
+                            <div class="product-card fade-up">
+                                <div class="product-image">
+                                    <img src="https://images.unsplash.com/photo-1602825418969-2d9f6b5e0f15?w=400&h=500&fit=crop" alt="Lavender Dreams Candle">
+                                    <div class="product-tags">
+                                        <span class="tag tag-bestseller">Bestseller</span>
+                                        <span class="tag tag-customizable">Customizable</span>
+                                    </div>
+                                    <button class="wishlist-btn" aria-label="Add to wishlist">♡</button>
+                                    <button class="quick-add-btn">Quick Add</button>
+                                </div>
+                                <div class="product-info">
+                                    <h3>Lavender Dreams Candle</h3>
+                                    <p class="product-scent">Floral • Calming</p>
+                                    <p class="product-price">₹1,299</p>
+                                    <div class="product-actions">
+                                        <a href="product.html" class="btn btn-outline btn-full">View Details</a>
+                                        <a href="customize.html" class="btn btn-primary btn-full">Customize</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="product-card fade-up delay-1">
+                                <div class="product-image">
+                                    <img src="https://images.unsplash.com/photo-1608181114410-db2dcadbe6cc?w=400&h=500&fit=crop" alt="Vanilla Bean Candle">
+                                    <div class="product-tags">
+                                        <span class="tag tag-bestseller">Bestseller</span>
+                                        <span class="tag tag-madetoorder">Made to Order</span>
+                                    </div>
+                                    <button class="wishlist-btn" aria-label="Add to wishlist">♡</button>
+                                    <button class="quick-add-btn">Quick Add</button>
+                                </div>
+                                <div class="product-info">
+                                    <h3>Vanilla Bean Candle</h3>
+                                    <p class="product-scent">Sweet • Comforting</p>
+                                    <p class="product-price">₹1,499</p>
+                                    <div class="product-actions">
+                                        <a href="product.html" class="btn btn-outline btn-full">View Details</a>
+                                        <a href="customize.html" class="btn btn-primary btn-full">Customize</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="product-card fade-up delay-2">
+                                <div class="product-image">
+                                    <img src="https://images.unsplash.com/photo-1596436906220-9c5a5a9a8b5e?w=400&h=500&fit=crop" alt="Rose Garden Gift Box">
+                                    <div class="product-tags">
+                                        <span class="tag tag-bestseller">Bestseller</span>
+                                        <span class="tag tag-free">Free Personalization</span>
+                                    </div>
+                                    <button class="wishlist-btn" aria-label="Add to wishlist">♡</button>
+                                    <button class="quick-add-btn">Quick Add</button>
+                                </div>
+                                <div class="product-info">
+                                    <h3>Rose Garden Gift Box</h3>
+                                    <p class="product-scent">Floral • Romantic</p>
+                                    <p class="product-price">₹2,199</p>
+                                    <div class="product-actions">
+                                        <a href="product.html" class="btn btn-outline btn-full">View Details</a>
+                                        <a href="customize.html" class="btn btn-primary btn-full">Customize</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="product-card fade-up delay-3">
+                                <div class="product-image">
+                                    <img src="https://images.unsplash.com/photo-1570823336712-4e18c5c0d6c6?w=400&h=500&fit=crop" alt="Sandalwood Serenity">
+                                    <div class="product-tags">
+                                        <span class="tag tag-bestseller">Bestseller</span>
+                                    </div>
+                                    <button class="wishlist-btn" aria-label="Add to wishlist">♡</button>
+                                    <button class="quick-add-btn">Quick Add</button>
+                                </div>
+                                <div class="product-info">
+                                    <h3>Sandalwood Serenity</h3>
+                                    <p class="product-scent">Woody • Grounding</p>
+                                    <p class="product-price">₹1,699</p>
+                                    <div class="product-actions">
+                                        <a href="product.html" class="btn btn-outline btn-full">View Details</a>
+                                        <button class="btn btn-secondary btn-full">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="product-card fade-up delay-4">
+                                <div class="product-image">
+                                    <img src="https://images.unsplash.com/photo-1603006905003-be4755e0f80b?w=400&h=500&fit=crop" alt="Ocean Breeze Candle">
+                                    <div class="product-tags">
+                                        <span class="tag tag-new">New</span>
+                                        <span class="tag tag-customizable">Customizable</span>
+                                    </div>
+                                    <button class="wishlist-btn" aria-label="Add to wishlist">♡</button>
+                                    <button class="quick-add-btn">Quick Add</button>
+                                </div>
+                                <div class="product-info">
+                                    <h3>Ocean Breeze Candle</h3>
+                                    <p class="product-scent">Fresh • Invigorating</p>
+                                    <p class="product-price">₹1,399</p>
+                                    <div class="product-actions">
+                                        <a href="product.html" class="btn btn-outline btn-full">View Details</a>
+                                        <a href="customize.html" class="btn btn-primary btn-full">Customize</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="product-card fade-up delay-5">
+                                <div class="product-image">
+                                    <img src="https://images.unsplash.com/photo-1608181114144-7486cbd9e76b?w=400&h=500&fit=crop" alt="Cinnamon Spice Candle">
+                                    <div class="product-tags">
+                                        <span class="tag tag-customizable">Customizable</span>
+                                    </div>
+                                    <button class="wishlist-btn" aria-label="Add to wishlist">♡</button>
+                                    <button class="quick-add-btn">Quick Add</button>
+                                </div>
+                                <div class="product-info">
+                                    <h3>Cinnamon Spice Candle</h3>
+                                    <p class="product-scent">Sweet • Warm</p>
+                                    <p class="product-price">₹1,599</p>
+                                    <div class="product-actions">
+                                        <a href="product.html" class="btn btn-outline btn-full">View Details</a>
+                                        <a href="customize.html" class="btn btn-primary btn-full">Customize</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="product-card fade-up delay-6">
+                                <div class="product-image">
+                                    <img src="https://images.unsplash.com/photo-1572569878856-69e27c380c0a?w=400&h=500&fit=crop" alt="Eucalyptus Mint Candle">
+                                    <div class="product-tags">
+                                        <span class="tag tag-new">New</span>
+                                    </div>
+                                    <button class="wishlist-btn" aria-label="Add to wishlist">♡</button>
+                                    <button class="quick-add-btn">Quick Add</button>
+                                </div>
+                                <div class="product-info">
+                                    <h3>Eucalyptus Mint Candle</h3>
+                                    <p class="product-scent">Fresh • Cleansing</p>
+                                    <p class="product-price">₹1,449</p>
+                                    <div class="product-actions">
+                                        <a href="product.html" class="btn btn-outline btn-full">View Details</a>
+                                        <button class="btn btn-secondary btn-full">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="product-card fade-up delay-7">
+                                <div class="product-image">
+                                    <img src="https://images.unsplash.com/photo-1602523774887-24416b0a6496?w=400&h=500&fit=crop" alt="Amber & Musk Candle">
+                                    <div class="product-tags">
+                                        <span class="tag tag-customizable">Customizable</span>
+                                    </div>
+                                    <button class="wishlist-btn" aria-label="Add to wishlist">♡</button>
+                                    <button class="quick-add-btn">Quick Add</button>
+                                </div>
+                                <div class="product-info">
+                                    <h3>Amber & Musk Candle</h3>
+                                    <p class="product-scent">Woody • Sensual</p>
+                                    <p class="product-price">₹1,799</p>
+                                    <div class="product-actions">
+                                        <a href="product.html" class="btn btn-outline btn-full">View Details</a>
+                                        <a href="customize.html" class="btn btn-primary btn-full">Customize</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Load More -->
+                        <div class="load-more-container">
+                            <button class="btn btn-secondary" id="loadMoreBtn">Load More Products</button>
+                        </div>
+
+                        <!-- SEO Content -->
+                        <div class="seo-content">
+                            <h2>Why Choose Tiny Flames Candles?</h2>
+                            <p>At Tiny Flames, every candle is handcrafted with care using premium soy wax blend, cotton wicks, and high-quality fragrance oils. Our candles are:</p>
+                            <ul>
+                                <li>✓ Made-to-order in small batches</li>
+                                <li>✓ Customizable with names, messages, and photos</li>
+                                <li>✓ Eco-friendly soy wax blend</li>
+                                <li>✓ Lead-free cotton wicks</li>
+                                <li>✓ Long burn time (20-40 hours)</li>
+                                <li>✓ Beautifully packaged for gifting</li>
+                                <li>✓ Shipped worldwide with care</li>
+                            </ul>
+                            <p>Whether you're looking for a birthday gift, anniversary present, wedding favor, or just treating yourself, our custom candles make every moment special.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="logo-text">Tiny Flames</span>
+                    <p class="brand-statement">Handcrafted candles made with love. Personalized for the moments that matter.</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Pinterest">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M8 12c0-2.2 1.8-4 4-4s4 1.8 4 4-1.8 4-4 4"></path>
+                                <path d="M12 8v8"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="shop.html">All Candles</a></li>
+                        <li><a href="customize.html">Custom Candles</a></li>
+                        <li><a href="gifts.html">Gift Sets</a></li>
+                        <li><a href="shop.html?occasion=birthday">Birthday Gifts</a></li>
+                        <li><a href="shop.html?occasion=anniversary">Anniversary Gifts</a></li>
+                        <li><a href="shop.html?occasion=wedding">Wedding Favors</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Gifting</h4>
+                    <ul>
+                        <li><a href="gifts.html">Gift Finder</a></li>
+                        <li><a href="wedding-corporate.html">Wedding Orders</a></li>
+                        <li><a href="wedding-corporate.html">Corporate Gifts</a></li>
+                        <li><a href="#">Gift Cards</a></li>
+                        <li><a href="#">Bulk Orders</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="shipping.html">Shipping & Delivery</a></li>
+                        <li><a href="track-order.html">Track Order</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                        <li><a href="#">Candle Care Guide</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="our-story.html">Our Story</a></li>
+                        <li><a href="#">Ingredients</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-policies">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="shipping.html">Shipping Policy</a>
+                    <a href="#">Refund Policy</a>
+                </div>
+                <p class="copyright">© 2024 Tiny Flames. All rights reserved.</p>
+                <div class="payment-icons">
+                    <img src="https://img.icons8.com/color/48/visa.png" alt="Visa" width="40">
+                    <img src="https://img.icons8.com/color/48/mastercard.png" alt="Mastercard" width="40">
+                    <img src="https://img.icons8.com/color/48/paypal.png" alt="PayPal" width="40">
+                    <img src="https://img.icons8.com/color/48/google-pay.png" alt="Google Pay" width="40">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919876543210?text=Hi%20Tiny%20Flames!%20I%20have%20a%20question%20about%20your%20candles." 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Chat on WhatsApp">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c0-5.45 4.432-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+    </a>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // Shop-specific functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Filter toggle for mobile
+            const filterToggle = document.querySelector('.filter-toggle');
+            const filterContent = document.getElementById('filterContent');
+            
+            if (filterToggle) {
+                filterToggle.addEventListener('click', function() {
+                    filterContent.classList.toggle('active');
+                });
+            }
+
+            // Price range display update
+            const priceMin = document.getElementById('priceMin');
+            const priceMax = document.getElementById('priceMax');
+            const priceDisplay = document.querySelectorAll('.price-display span');
+
+            function updatePriceDisplay() {
+                if (priceMin && priceMax && priceDisplay.length >= 3) {
+                    priceDisplay[0].textContent = '₹' + priceMin.value;
+                    priceDisplay[2].textContent = '₹' + priceMax.value;
+                }
+            }
+
+            if (priceMin) priceMin.addEventListener('input', updatePriceDisplay);
+            if (priceMax) priceMax.addEventListener('input', updatePriceDisplay);
+
+            // Clear filters
+            const clearFilters = document.querySelector('.clear-filters');
+            if (clearFilters) {
+                clearFilters.addEventListener('click', function() {
+                    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+                    checkboxes.forEach(cb => cb.checked = false);
+                    if (priceMin) priceMin.value = 0;
+                    if (priceMax) priceMax.value = 5000;
+                    updatePriceDisplay();
+                });
+            }
+
+            // Load more products (simulation)
+            const loadMoreBtn = document.getElementById('loadMoreBtn');
+            if (loadMoreBtn) {
+                loadMoreBtn.addEventListener('click', function() {
+                    // In real implementation, this would load more products via AJAX
+                    this.textContent = 'Loading...';
+                    setTimeout(() => {
+                        this.textContent = 'No More Products';
+                        this.disabled = true;
+                    }, 1000);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
