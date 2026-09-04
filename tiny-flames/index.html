@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiny Flames — Custom Candles, Handcrafted for the Moments that Matter</title>
+    <meta name="description" content="Personalized, handcrafted candles made with love in India, shipped worldwide. Custom candles with names, messages, dates, and photos. Made for the moments that matter.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar" id="announcementBar">
+        <div class="announcement-slider">
+            <span class="announcement-item active">Free shipping in India on orders above ₹999</span>
+            <span class="announcement-item">International delivery to 25+ countries</span>
+            <span class="announcement-item">Made-to-order. 3–5 days. Worth the wait.</span>
+            <span class="announcement-item">Design proof before every custom order</span>
+        </div>
+        <button class="announcement-close" aria-label="Close announcement">&times;</button>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <button class="mobile-menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <a href="index.html" class="logo">
+                <span class="logo-text">Tiny Flames</span>
+            </a>
+            
+            <ul class="nav-menu desktop-only">
+                <li><a href="pages/shop.html">Shop All</a></li>
+                <li><a href="pages/customize.html">Customize</a></li>
+                <li><a href="pages/gifts.html">Gifts</a></li>
+                <li><a href="pages/wedding-corporate.html">Wedding & Corporate</a></li>
+                <li><a href="pages/our-story.html">Our Story</a></li>
+                <li><a href="pages/contact.html">Contact</a></li>
+            </ul>
+            
+            <div class="nav-actions">
+                <button class="nav-icon" aria-label="Search">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </button>
+                <button class="nav-icon" aria-label="Account">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </button>
+                <button class="nav-icon cart-icon" aria-label="Cart">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span class="cart-count">0</span>
+                </button>
+                <div class="currency-selector desktop-only">
+                    <select id="currencySelect" aria-label="Select currency">
+                        <option value="INR">₹ INR</option>
+                        <option value="USD">$ USD</option>
+                        <option value="GBP">£ GBP</option>
+                        <option value="AED">د.إ AED</option>
+                    </select>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <span class="logo-text">Tiny Flames</span>
+            <button class="mobile-menu-close" aria-label="Close menu">&times;</button>
+        </div>
+        <ul class="mobile-nav-menu">
+            <li><a href="pages/shop.html">Shop All</a></li>
+            <li><a href="pages/customize.html">Customize</a></li>
+            <li><a href="pages/gifts.html">Gifts</a></li>
+            <li><a href="pages/wedding-corporate.html">Wedding & Corporate</a></li>
+            <li><a href="pages/our-story.html">Our Story</a></li>
+            <li><a href="pages/contact.html">Contact</a></li>
+            <li class="divider"></li>
+            <li><a href="pages/track-order.html">Track Order</a></li>
+            <li><a href="pages/faq.html">FAQ</a></li>
+            <li><a href="pages/shipping.html">Shipping & Delivery</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-background">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="hero-content container">
+                <h1 class="hero-title fade-in">Tiny Flames, Big Memories.</h1>
+                <p class="hero-subtitle fade-in delay-1">Custom candles, handcrafted for the moments that matter.<br>Shipped from India to 25+ countries.</p>
+                <div class="hero-buttons fade-in delay-2">
+                    <a href="pages/customize.html" class="btn btn-primary">Customize Your Candle</a>
+                    <a href="pages/shop.html" class="btn btn-secondary">Shop Best Sellers</a>
+                </div>
+                <p class="hero-trust-line fade-in delay-3">Made-to-order • Design proof before dispatch • Worldwide shipping</p>
+                <a href="#trust-strip" class="scroll-indicator" aria-label="Scroll down">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 5v14M5 12l7 7 7-7"/>
+                    </svg>
+                </a>
+            </div>
+        </section>
+
+        <!-- Trust Strip -->
+        <section class="trust-strip" id="trust-strip">
+            <div class="container">
+                <div class="trust-grid">
+                    <div class="trust-item fade-up">
+                        <svg class="trust-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                        <span>Handmade in Small Batches</span>
+                    </div>
+                    <div class="trust-item fade-up delay-1">
+                        <svg class="trust-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+                            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+                        </svg>
+                        <span>Design Proof Before Dispatch</span>
+                    </div>
+                    <div class="trust-item fade-up delay-2">
+                        <svg class="trust-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                        </svg>
+                        <span>Ships Worldwide</span>
+                    </div>
+                    <div class="trust-item fade-up delay-3">
+                        <svg class="trust-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                        <span>Secure Payments</span>
+                    </div>
+                    <div class="trust-item fade-up delay-4">
+                        <svg class="trust-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                        </svg>
+                        <span>Personalized with Care</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works -->
+        <section class="how-it-works section">
+            <div class="container">
+                <h2 class="section-title fade-up">Create a candle that feels like them</h2>
+                <p class="section-subtitle fade-up delay-1">Three simple steps. One unforgettable gift.</p>
+                
+                <div class="steps-grid">
+                    <div class="step-card fade-up delay-2">
+                        <div class="step-number">1</div>
+                        <h3>Choose Your Candle</h3>
+                        <p>Select the size, type, and scent that fits the moment.</p>
+                    </div>
+                    <div class="step-card fade-up delay-3">
+                        <div class="step-number">2</div>
+                        <h3>Personalize It</h3>
+                        <p>Add a name, message, date, or photo. Watch your design come to life.</p>
+                    </div>
+                    <div class="step-card fade-up delay-4">
+                        <div class="step-number">3</div>
+                        <h3>Approve & We Craft It</h3>
+                        <p>We send a design proof. Once you approve it, we make and ship your candle.</p>
+                    </div>
+                </div>
+                
+                <div class="section-cta fade-up delay-5">
+                    <a href="pages/customize.html" class="btn btn-primary">Start Customizing</a>
+                    <a href="#" class="text-link">See how personalization works →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Best Sellers -->
+        <section class="best-sellers section bg-light">
+            <div class="container">
+                <h2 class="section-title fade-up">Loved by Tiny Flames customers</h2>
+                
+                <div class="product-grid">
+                    <div class="product-card fade-up delay-1">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1602825418969-2d9f6b5e0f15?w=400&h=500&fit=crop" alt="Lavender Dreams Candle">
+                            <div class="product-tags">
+                                <span class="tag tag-bestseller">Bestseller</span>
+                                <span class="tag tag-customizable">Customizable</span>
+                            </div>
+                            <button class="wishlist-btn" aria-label="Add to wishlist">♡</button>
+                        </div>
+                        <div class="product-info">
+                            <h3>Lavender Dreams Candle</h3>
+                            <p class="product-price">₹1,299</p>
+                            <button class="btn btn-outline btn-full">Customize</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card fade-up delay-2">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1608181114410-db2dcadbe6cc?w=400&h=500&fit=crop" alt="Vanilla Bean Candle">
+                            <div class="product-tags">
+                                <span class="tag tag-bestseller">Bestseller</span>
+                                <span class="tag tag-madetoorder">Made to Order</span>
+                            </div>
+                            <button class="wishlist-btn" aria-label="Add to wishlist">♡</button>
+                        </div>
+                        <div class="product-info">
+                            <h3>Vanilla Bean Candle</h3>
+                            <p class="product-price">₹1,499</p>
+                            <button class="btn btn-outline btn-full">Customize</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card fade-up delay-3">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1596436906220-9c5a5a9a8b5e?w=400&h=500&fit=crop" alt="Rose Garden Gift Box">
+                            <div class="product-tags">
+                                <span class="tag tag-bestseller">Bestseller</span>
+                                <span class="tag tag-free">Free Personalization</span>
+                            </div>
+                            <button class="wishlist-btn" aria-label="Add to wishlist">♡</button>
+                        </div>
+                        <div class="product-info">
+                            <h3>Rose Garden Gift Box</h3>
+                            <p class="product-price">₹2,199</p>
+                            <button class="btn btn-outline btn-full">Customize</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card fade-up delay-4">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1570823336712-4e18c5c0d6c6?w=400&h=500&fit=crop" alt="Sandalwood Serenity">
+                            <div class="product-tags">
+                                <span class="tag tag-bestseller">Bestseller</span>
+                            </div>
+                            <button class="wishlist-btn" aria-label="Add to wishlist">♡</button>
+                        </div>
+                        <div class="product-info">
+                            <h3>Sandalwood Serenity</h3>
+                            <p class="product-price">₹1,699</p>
+                            <button class="btn btn-outline btn-full">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="section-cta fade-up delay-5">
+                    <a href="pages/shop.html" class="btn btn-secondary">View All Best Sellers</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Customization Teaser -->
+        <section class="customization-teaser section">
+            <div class="container">
+                <div class="teaser-split">
+                    <div class="teaser-content fade-up">
+                        <h2>Make it theirs before you even add to cart</h2>
+                        <p>Add a name, a date, or a message. We'll turn it into a candle they'll keep forever.</p>
+                        <div class="mini-preview">
+                            <label for="namePreview">Try their name</label>
+                            <input type="text" id="namePreview" placeholder="Enter a name..." maxlength="20">
+                            <div class="preview-candle">
+                                <div class="candle-label" id="candleLabel">
+                                    <span class="label-name">Your Name</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="pages/customize.html" class="btn btn-primary">Try the Full Builder</a>
+                    </div>
+                    <div class="teaser-image fade-up delay-1">
+                        <img src="https://images.unsplash.com/photo-1603006905003-be475563bc59?w=600&h=700&fit=crop" alt="Personalized candle being crafted">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gift by Occasion -->
+        <section class="gift-occasion section bg-light">
+            <div class="container">
+                <h2 class="section-title fade-up">Find a candle for every feeling</h2>
+                
+                <div class="occasion-scroll">
+                    <div class="occasion-card fade-up delay-1">
+                        <img src="https://images.unsplash.com/photo-1530103862676-de3c9da59af7?w=400&h=300&fit=crop" alt="Birthday gifts">
+                        <div class="occasion-info">
+                            <h3>Birthday</h3>
+                            <p>For the person who deserves more than a message.</p>
+                            <a href="pages/gifts.html#birthday" class="text-link">Explore Gifts →</a>
+                        </div>
+                    </div>
+                    
+                    <div class="occasion-card fade-up delay-2">
+                        <img src="https://images.unsplash.com/photo-1516961642265-531546e84af2?w=400&h=300&fit=crop" alt="Anniversary gifts">
+                        <div class="occasion-info">
+                            <h3>Anniversary</h3>
+                            <p>Celebrate another year of love and memories.</p>
+                            <a href="pages/gifts.html#anniversary" class="text-link">Explore Gifts →</a>
+                        </div>
+                    </div>
+                    
+                    <div class="occasion-card fade-up delay-3">
+                        <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?w=400&h=300&fit=crop" alt="Wedding gifts">
+                        <div class="occasion-info">
+                            <h3>Wedding</h3>
+                            <p>Beautiful favors and gifts for the special day.</p>
+                            <a href="pages/wedding-corporate.html#wedding" class="text-link">Explore Gifts →</a>
+                        </div>
+                    </div>
+                    
+                    <div class="occasion-card fade-up delay-4">
+                        <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=400&h=300&fit=crop" alt="Diwali gifts">
+                        <div class="occasion-info">
+                            <h3>Diwali</h3>
+                            <p>Light up their celebration with warmth.</p>
+                            <a href="pages/gifts.html#diwali" class="text-link">Explore Gifts →</a>
+                        </div>
+                    </div>
+                    
+                    <div class="occasion-card fade-up delay-5">
+                        <img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=400&h=300&fit=crop" alt="Valentine's gifts">
+                        <div class="occasion-info">
+                            <h3>Valentine's Day</h3>
+                            <p>Show love with a personalized touch.</p>
+                            <a href="pages/gifts.html#valentines" class="text-link">Explore Gifts →</a>
+                        </div>
+                    </div>
+                    
+                    <div class="occasion-card fade-up delay-6">
+                        <img src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=400&h=300&fit=crop" alt="Just because gifts">
+                        <div class="occasion-info">
+                            <h3>Just Because</h3>
+                            <p>Sometimes the best gifts have no reason.</p>
+                            <a href="pages/gifts.html#justbecause" class="text-link">Explore Gifts →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gift Finder Banner -->
+        <section class="gift-finder-banner section">
+            <div class="container text-center">
+                <h2 class="fade-up">Not sure what to gift?</h2>
+                <p class="fade-up delay-1">Answer 6 quick questions and we'll find the perfect Tiny Flames gift.</p>
+                <a href="pages/gift-finder.html" class="btn btn-primary fade-up delay-2">Find a Gift</a>
+            </div>
+        </section>
+
+        <!-- Wedding & Corporate Strip -->
+        <section class="wedding-corporate-strip section bg-light">
+            <div class="container">
+                <div class="split-cards">
+                    <div class="split-card fade-up">
+                        <h3>Wedding Favors & Return Gifts</h3>
+                        <p>Personalized candles your guests will actually remember.</p>
+                        <a href="pages/wedding-corporate.html#wedding" class="btn btn-secondary">Plan Wedding Favors</a>
+                    </div>
+                    <div class="split-card fade-up delay-1">
+                        <h3>Corporate Gifting</h3>
+                        <p>Thoughtful branded candles for teams, clients, and events.</p>
+                        <a href="pages/wedding-corporate.html#corporate" class="btn btn-secondary">Get Corporate Quote</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section class="reviews section">
+            <div class="container">
+                <h2 class="section-title fade-up">Real flames, real memories</h2>
+                
+                <div class="reviews-carousel fade-up delay-1">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="stars">★★★★★</div>
+                            <span class="verified-badge">Verified Buyer</span>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1602825418969-2d9f6b5e0f15?w=300&h=300&fit=crop" alt="Customer candle photo">
+                        <p class="review-text">"The personalized candle I ordered for my mom's birthday was absolutely beautiful! The quality is amazing and it arrived safely in the US."</p>
+                        <p class="review-author">— Priya S., California</p>
+                    </div>
+                    
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="stars">★★★★★</div>
+                            <span class="verified-badge">Verified Buyer</span>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1608181114410-db2dcadbe6cc?w=300&h=300&fit=crop" alt="Customer candle photo">
+                        <p class="review-text">"Ordered wedding favors for 200 guests. Every single one was perfect. The team was so helpful throughout the process!"</p>
+                        <p class="review-author">— Anjali M., Mumbai</p>
+                    </div>
+                    
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="stars">★★★★★</div>
+                            <span class="verified-badge">Verified Buyer</span>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1596436906220-9c5a5a9a8b5e?w=300&h=300&fit=crop" alt="Customer candle photo">
+                        <p class="review-text">"Love that I got to see the design proof before they made it. The attention to detail is incredible. Will definitely order again!"</p>
+                        <p class="review-author">— Rohit K., London</p>
+                    </div>
+                </div>
+                
+                <div class="section-cta fade-up delay-2">
+                    <a href="pages/reviews.html" class="btn btn-secondary">Read More Reviews</a>
+                    <p class="whatsapp-line">Questions? Real humans answer on WhatsApp.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- International Delivery Widget -->
+        <section class="international-delivery section bg-light">
+            <div class="container text-center">
+                <h2 class="fade-up">We ship from India to the world</h2>
+                <div class="delivery-widget fade-up delay-1">
+                    <label for="countrySelect">Select your country</label>
+                    <select id="countrySelect">
+                        <option value="">Choose a country...</option>
+                        <option value="US">United States</option>
+                        <option value="GB">United Kingdom</option>
+                        <option value="AE">United Arab Emirates</option>
+                        <option value="AU">Australia</option>
+                        <option value="CA">Canada</option>
+                        <option value="DE">Germany</option>
+                        <option value="FR">France</option>
+                        <option value="SG">Singapore</option>
+                        <option value="IN">India</option>
+                    </select>
+                    <div class="delivery-result" id="deliveryResult"></div>
+                    <button class="btn btn-primary" id="checkDeliveryBtn">Check Delivery Time</button>
+                    <a href="pages/shipping.html" class="text-link">Read international shipping policy →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Brand Story Section -->
+        <section class="brand-story section">
+            <div class="container">
+                <div class="story-split">
+                    <div class="story-content fade-up">
+                        <h2>Tiny Flames began with a small belief</h2>
+                        <p>That the smallest gestures can carry the biggest feelings.<br>A candle with a name. A message across distance. A memory made visible.</p>
+                        <a href="pages/our-story.html" class="btn btn-secondary">Read Our Story</a>
+                    </div>
+                    <div class="story-image fade-up delay-1">
+                        <img src="https://images.unsplash.com/photo-1550505180-8ed5c6d92fa3?w=600&h=500&fit=crop" alt="Candle making process">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Instagram Feed -->
+        <section class="instagram-feed section bg-light">
+            <div class="container text-center">
+                <h2 class="fade-up">Made daily, shared warmly</h2>
+                <div class="instagram-grid fade-up delay-1">
+                    <img src="https://images.unsplash.com/photo-1602825418969-2d9f6b5e0f15?w=300&h=300&fit=crop" alt="Instagram post">
+                    <img src="https://images.unsplash.com/photo-1608181114410-db2dcadbe6cc?w=300&h=300&fit=crop" alt="Instagram post">
+                    <img src="https://images.unsplash.com/photo-1596436906220-9c5a5a9a8b5e?w=300&h=300&fit=crop" alt="Instagram post">
+                    <img src="https://images.unsplash.com/photo-1570823336712-4e18c5c0d6c6?w=300&h=300&fit=crop" alt="Instagram post">
+                    <img src="https://images.unsplash.com/photo-1530103862676-de3c9da59af7?w=300&h=300&fit=crop" alt="Instagram post">
+                    <img src="https://images.unsplash.com/photo-1516961642265-531546e84af2?w=300&h=300&fit=crop" alt="Instagram post">
+                </div>
+                <a href="https://instagram.com/tinyflames" target="_blank" rel="noopener" class="btn btn-outline fade-up delay-2">Follow @tinyflames</a>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section section">
+            <div class="container">
+                <h2 class="section-title fade-up">Frequently Asked Questions</h2>
+                
+                <div class="faq-accordion fade-up delay-1">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>How long does customization take?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Customized candles are made to order in 3-5 business days. After you approve the design proof, we begin production immediately.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Do I get a design proof before production?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes! For all customized orders, we send you a digital design proof within 24 hours. Production starts only after you approve it.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Do you ship internationally?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes, we ship to 25+ countries worldwide. International delivery typically takes 7-12 business days after dispatch.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What if my candle arrives damaged?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We carefully pack every candle. If it arrives damaged, contact us within 48 hours with photos and we'll send a replacement immediately.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Can I cancel or change my order?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Since our candles are made to order, changes can be made within 24 hours of placing the order. Contact us on WhatsApp for quick assistance.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="section-cta fade-up delay-2">
+                    <a href="pages/faq.html" class="btn btn-secondary">View All FAQs</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section class="final-cta section">
+            <div class="container text-center">
+                <h2 class="fade-up">Send a little warmth today</h2>
+                <p class="fade-up delay-1">Create a candle that carries their name, your words, and a memory they can hold.</p>
+                <div class="fade-up delay-2">
+                    <a href="pages/customize.html" class="btn btn-primary btn-large">Customize Your Candle</a>
+                    <a href="pages/gifts.html" class="btn btn-secondary btn-large">Shop Gift Boxes</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <div class="footer-brand">
+                        <span class="logo-text">Tiny Flames</span>
+                        <p>Small gestures. Big feelings.</p>
+                        <div class="social-icons">
+                            <a href="#" aria-label="Instagram">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                </svg>
+                            </a>
+                            <a href="#" aria-label="Facebook">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                                </svg>
+                            </a>
+                            <a href="#" aria-label="Pinterest">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <path d="M8 12c0-2.2 1.8-4 4-4s4 1.8 4 4-1.8 4-4 4c-1.5 0-2.8-.8-3.5-2"></path>
+                                    <path d="M12 8v8"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="pages/shop.html">Best Sellers</a></li>
+                        <li><a href="pages/shop.html#personalized">Personalized Candles</a></li>
+                        <li><a href="pages/shop.html#giftboxes">Gift Boxes</a></li>
+                        <li><a href="pages/wedding-corporate.html#wedding">Wedding Favors</a></li>
+                        <li><a href="pages/shop.html#festival">Festival Collection</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Gifting</h4>
+                    <ul>
+                        <li><a href="pages/gifts.html#birthday">Birthday Gifts</a></li>
+                        <li><a href="pages/gifts.html#anniversary">Anniversary Gifts</a></li>
+                        <li><a href="pages/gifts.html#wedding">Wedding Gifts</a></li>
+                        <li><a href="pages/wedding-corporate.html#corporate">Corporate Gifts</a></li>
+                        <li><a href="pages/gift-finder.html">Gift Finder</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="pages/contact.html">Contact</a></li>
+                        <li><a href="pages/track-order.html">Track Order</a></li>
+                        <li><a href="pages/faq.html">FAQ</a></li>
+                        <li><a href="pages/shipping.html">Shipping & Delivery</a></li>
+                        <li><a href="pages/returns.html">Returns & Replacement</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="pages/our-story.html">Our Story</a></li>
+                        <li><a href="pages/blog.html">Blog</a></li>
+                        <li><a href="pages/privacy.html">Privacy Policy</a></li>
+                        <li><a href="pages/terms.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Tiny Flames. All rights reserved.</p>
+                <div class="payment-icons">
+                    <span>Visa</span>
+                    <span>Mastercard</span>
+                    <span>UPI</span>
+                    <span>PayPal</span>
+                </div>
+                <p class="footer-note">Made with love in India • Ships worldwide</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/91XXXXXXXXXX" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+    </a>
+
+    <!-- Sticky Mobile Bottom Bar -->
+    <div class="mobile-sticky-bar mobile-only">
+        <a href="https://wa.me/91XXXXXXXXXX" class="sticky-whatsapp" aria-label="Chat on WhatsApp">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+            </svg>
+        </a>
+        <a href="pages/customize.html" class="sticky-cta">Customize Your Candle</a>
+        <a href="pages/cart.html" class="sticky-cart" aria-label="View cart">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="9" cy="21" r="1"></circle>
+                <circle cx="20" cy="21" r="1"></circle>
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            <span class="cart-count">0</span>
+        </a>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
