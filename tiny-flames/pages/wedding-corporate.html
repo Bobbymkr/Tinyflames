@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding & Corporate Orders — Tiny Flames</title>
+    <meta name="description" content="Custom candles for weddings and corporate events. Bulk orders with personalized favors, gifts, and branding options.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar" id="announcementBar">
+        <div class="announcement-slider">
+            <span class="announcement-item active">Free shipping in India on orders above ₹999</span>
+            <span class="announcement-item">International delivery to 25+ countries</span>
+            <span class="announcement-item">Made-to-order. 3–5 days. Worth the wait.</span>
+        </div>
+        <button class="announcement-close" aria-label="Close announcement">&times;</button>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <button class="mobile-menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <a href="../index.html" class="logo">
+                <span class="logo-text">Tiny Flames</span>
+            </a>
+            
+            <ul class="nav-menu desktop-only">
+                <li><a href="shop.html">Shop All</a></li>
+                <li><a href="customize.html">Customize</a></li>
+                <li><a href="gifts.html">Gifts</a></li>
+                <li><a href="wedding-corporate.html" class="active">Wedding & Corporate</a></li>
+                <li><a href="our-story.html">Our Story</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            
+            <div class="nav-actions">
+                <button class="nav-icon" aria-label="Search">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </button>
+                <button class="nav-icon" aria-label="Account">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </button>
+                <button class="nav-icon cart-icon" aria-label="Cart">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span class="cart-count">0</span>
+                </button>
+                <div class="currency-selector desktop-only">
+                    <select id="currencySelect" aria-label="Select currency">
+                        <option value="INR">₹ INR</option>
+                        <option value="USD">$ USD</option>
+                        <option value="GBP">£ GBP</option>
+                        <option value="AED">د.إ AED</option>
+                    </select>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <span class="logo-text">Tiny Flames</span>
+            <button class="mobile-menu-close" aria-label="Close menu">&times;</button>
+        </div>
+        <ul class="mobile-nav-menu">
+            <li><a href="shop.html">Shop All</a></li>
+            <li><a href="customize.html">Customize</a></li>
+            <li><a href="gifts.html">Gifts</a></li>
+            <li><a href="wedding-corporate.html" class="active">Wedding & Corporate</a></li>
+            <li><a href="our-story.html">Our Story</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="page-hero section">
+            <div class="container">
+                <h1>Wedding & Corporate Orders</h1>
+                <p class="hero-subtitle">Create unforgettable moments with custom candles that celebrate love and success.</p>
+            </div>
+        </section>
+
+        <!-- Wedding Section -->
+        <section class="wedding-section section bg-light">
+            <div class="container">
+                <div class="split-layout">
+                    <div class="split-content fade-up">
+                        <h2>Wedding Favors & Gifts</h2>
+                        <p class="lead">Make your special day even more memorable with personalized candle favors that your guests will treasure long after the celebration ends.</p>
+                        
+                        <div class="feature-list">
+                            <div class="feature-item">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span>Custom labels with names & wedding date</span>
+                            </div>
+                            <div class="feature-item">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span>Bulk pricing for 50+ orders</span>
+                            </div>
+                            <div class="feature-item">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span>Choice of scents and colors</span>
+                            </div>
+                            <div class="feature-item">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span>Elegant packaging ready for gifting</span>
+                            </div>
+                            <div class="feature-item">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span>Design proof before production</span>
+                            </div>
+                            <div class="feature-item">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span>Timeline coordination for your big day</span>
+                            </div>
+                        </div>
+
+                        <div class="wedding-cta">
+                            <a href="#wedding-inquiry" class="btn btn-primary">Request Wedding Quote</a>
+                            <a href="shop.html?occasion=wedding" class="text-link">Browse Wedding Collection →</a>
+                        </div>
+                    </div>
+
+                    <div class="split-image fade-up delay-2">
+                        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800&h=1000&fit=crop" alt="Wedding Candle Favors">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Wedding Packages -->
+        <section class="packages-section section">
+            <div class="container">
+                <h2 class="section-title fade-up">Wedding Packages</h2>
+                <p class="section-subtitle fade-up delay-1">Choose the perfect package for your celebration.</p>
+
+                <div class="packages-grid">
+                    <div class="package-card fade-up delay-2">
+                        <div class="package-header">
+                            <h3>Intimate</h3>
+                            <p class="package-size">Up to 50 Guests</p>
+                        </div>
+                        <div class="package-price">
+                            <span class="price-from">Starting at</span>
+                            <span class="price-value">₹899</span>
+                            <span class="price-unit">per candle</span>
+                        </div>
+                        <ul class="package-features">
+                            <li>✓ Custom label design</li>
+                            <li>✓ Choice of 3 scents</li>
+                            <li>✓ Names & date personalization</li>
+                            <li>✓ Gift box packaging</li>
+                            <li>✓ Design proof included</li>
+                            <li>✓ Production: 7-10 days</li>
+                        </ul>
+                        <a href="#wedding-inquiry" class="btn btn-outline btn-full">Inquire Now</a>
+                    </div>
+
+                    <div class="package-card featured fade-up delay-3">
+                        <div class="featured-badge">Most Popular</div>
+                        <div class="package-header">
+                            <h3>Celebration</h3>
+                            <p class="package-size">50-150 Guests</p>
+                        </div>
+                        <div class="package-price">
+                            <span class="price-from">Starting at</span>
+                            <span class="price-value">₹749</span>
+                            <span class="price-unit">per candle</span>
+                        </div>
+                        <ul class="package-features">
+                            <li>✓ Custom label design</li>
+                            <li>✓ Choice of 5 scents</li>
+                            <li>✓ Names & date personalization</li>
+                            <li>✓ Premium gift box packaging</li>
+                            <li>✓ Design proof included</li>
+                            <li>✓ Priority production: 5-7 days</li>
+                            <li>✓ Bulk discount applied</li>
+                        </ul>
+                        <a href="#wedding-inquiry" class="btn btn-primary btn-full">Inquire Now</a>
+                    </div>
+
+                    <div class="package-card fade-up delay-4">
+                        <div class="package-header">
+                            <h3>Grand</h3>
+                            <p class="package-size">150+ Guests</p>
+                        </div>
+                        <div class="package-price">
+                            <span class="price-from">Starting at</span>
+                            <span class="price-value">₹649</span>
+                            <span class="price-unit">per candle</span>
+                        </div>
+                        <ul class="package-features">
+                            <li>✓ Fully custom label design</li>
+                            <li>✓ Unlimited scent options</li>
+                            <li>✓ Full personalization</li>
+                            <li>✓ Luxury packaging</li>
+                            <li>✓ Multiple design proofs</li>
+                            <li>✓ Rush production available</li>
+                            <li>✓ Maximum bulk discount</li>
+                            <li>✓ Dedicated account manager</li>
+                        </ul>
+                        <a href="#wedding-inquiry" class="btn btn-outline btn-full">Inquire Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Corporate Section -->
+        <section class="corporate-section section bg-light">
+            <div class="container">
+                <div class="split-layout reverse">
+                    <div class="split-content fade-up">
+                        <h2>Corporate Gifting</h2>
+                        <p class="lead">Elevate your brand with custom candles that leave a lasting impression. Perfect for employee appreciation, client gifts, events, and promotional campaigns.</p>
+                        
+                        <div class="feature-list">
+                            <div class="feature-item">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span>Logo branding on labels</span>
+                            </div>
+                            <div class="feature-item">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span>Custom packaging with brand colors</span>
+                            </div>
+                            <div class="feature-item">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span>Tailored messaging for campaigns</span>
+                            </div>
+                            <div class="feature-item">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span>Volume discounts for large orders</span>
+                            </div>
+                            <div class="feature-item">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span>Flexible delivery schedules</span>
+                            </div>
+                            <div class="feature-item">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span>Invoice and GST documentation</span>
+                            </div>
+                        </div>
+
+                        <div class="corporate-cta">
+                            <a href="#corporate-inquiry" class="btn btn-primary">Request Corporate Quote</a>
+                            <a href="#" class="text-link">Download Corporate Catalog →</a>
+                        </div>
+                    </div>
+
+                    <div class="split-image fade-up delay-2">
+                        <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&h=1000&fit=crop" alt="Corporate Gifting">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Corporate Use Cases -->
+        <section class="use-cases section">
+            <div class="container">
+                <h2 class="section-title fade-up">Perfect For Every Occasion</h2>
+                
+                <div class="use-cases-grid">
+                    <div class="use-case-card fade-up delay-1">
+                        <div class="use-case-icon">🎁</div>
+                        <h3>Employee Appreciation</h3>
+                        <p>Show your team they're valued with thoughtful, personalized gifts.</p>
+                    </div>
+                    <div class="use-case-card fade-up delay-2">
+                        <div class="use-case-icon">🤝</div>
+                        <h3>Client Gifts</h3>
+                        <p>Strengthen relationships with memorable branded candles.</p>
+                    </div>
+                    <div class="use-case-card fade-up delay-3">
+                        <div class="use-case-icon">🎉</div>
+                        <h3>Events & Conferences</h3>
+                        <p>Create buzz with custom favors for attendees.</p>
+                    </div>
+                    <div class="use-case-card fade-up delay-4">
+                        <div class="use-case-icon">🏆</div>
+                        <h3>Achievement Recognition</h3>
+                        <p>Celebrate milestones and achievements meaningfully.</p>
+                    </div>
+                    <div class="use-case-card fade-up delay-5">
+                        <div class="use-case-icon">🎄</div>
+                        <h3>Holiday Campaigns</h3>
+                        <p>Seasonal gifting that stands out from the ordinary.</p>
+                    </div>
+                    <div class="use-case-card fade-up delay-6">
+                        <div class="use-case-icon">🚀</div>
+                        <h3>Product Launches</h3>
+                        <p>Promotional items that people actually keep and use.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Inquiry Forms -->
+        <section class="inquiry-section section bg-light">
+            <div class="container">
+                <!-- Wedding Inquiry -->
+                <div id="wedding-inquiry" class="inquiry-form-container fade-up">
+                    <h2>Wedding Inquiry</h2>
+                    <p>Tell us about your special day and we'll create a custom quote for you.</p>
+                    
+                    <form class="inquiry-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="weddingName">Your Name *</label>
+                                <input type="text" id="weddingName" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="weddingEmail">Email Address *</label>
+                                <input type="email" id="weddingEmail" name="email" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="weddingPhone">Phone Number *</label>
+                                <input type="tel" id="weddingPhone" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="weddingDate">Wedding Date *</label>
+                                <input type="date" id="weddingDate" name="date" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="guestCount">Number of Guests *</label>
+                                <select id="guestCount" name="guestCount" required>
+                                    <option value="">Select...</option>
+                                    <option value="under-50">Under 50</option>
+                                    <option value="50-100">50-100</option>
+                                    <option value="100-200">100-200</option>
+                                    <option value="200-500">200-500</option>
+                                    <option value="500-plus">500+</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="weddingLocation">Wedding Location</label>
+                                <input type="text" id="weddingLocation" name="location">
+                            </div>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="weddingDetails">Tell Us More About Your Vision</label>
+                            <textarea id="weddingDetails" name="details" rows="4" placeholder="Share your theme colors, preferred scents, personalization ideas, or any special requirements..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-large">Submit Wedding Inquiry</button>
+                    </form>
+                </div>
+
+                <!-- Corporate Inquiry -->
+                <div id="corporate-inquiry" class="inquiry-form-container fade-up delay-2">
+                    <h2>Corporate Inquiry</h2>
+                    <p>Let's discuss how we can help elevate your brand with custom candles.</p>
+                    
+                    <form class="inquiry-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="corpName">Your Name *</label>
+                                <input type="text" id="corpName" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="corpEmail">Work Email *</label>
+                                <input type="email" id="corpEmail" name="email" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="corpCompany">Company Name *</label>
+                                <input type="text" id="corpCompany" name="company" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="corpPhone">Phone Number *</label>
+                                <input type="tel" id="corpPhone" name="phone" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="corpType">Order Type *</label>
+                                <select id="corpType" name="orderType" required>
+                                    <option value="">Select...</option>
+                                    <option value="employee-gifts">Employee Gifts</option>
+                                    <option value="client-gifts">Client Gifts</option>
+                                    <option value="event-favors">Event Favors</option>
+                                    <option value="promotional">Promotional Campaign</option>
+                                    <option value="holiday">Holiday Gifting</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="corpQuantity">Estimated Quantity *</label>
+                                <select id="corpQuantity" name="quantity" required>
+                                    <option value="">Select...</option>
+                                    <option value="50-100">50-100</option>
+                                    <option value="100-500">100-500</option>
+                                    <option value="500-1000">500-1000</option>
+                                    <option value="1000-plus">1000+</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="corpDetails">Project Details</label>
+                            <textarea id="corpDetails" name="details" rows="4" placeholder="Describe your requirements, timeline, branding needs, budget range, or any questions..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-large">Submit Corporate Inquiry</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section class="why-choose section">
+            <div class="container">
+                <h2 class="section-title fade-up">Why Choose Tiny Flames for Bulk Orders?</h2>
+                
+                <div class="why-bulk-grid">
+                    <div class="why-bulk-item fade-up delay-1">
+                        <div class="why-bulk-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
+                        </div>
+                        <h3>Handcrafted Quality</h3>
+                        <p>Every candle is made with care, ensuring premium quality even for large orders.</p>
+                    </div>
+                    <div class="why-bulk-item fade-up delay-2">
+                        <div class="why-bulk-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M12 6v6l4 2"/>
+                            </svg>
+                        </div>
+                        <h3>Reliable Timelines</h3>
+                        <p>We coordinate with your event schedule and deliver on time, every time.</p>
+                    </div>
+                    <div class="why-bulk-item fade-up delay-3">
+                        <div class="why-bulk-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <line x1="12" y1="1" x2="12" y2="23"></line>
+                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                            </svg>
+                        </div>
+                        <h3>Competitive Pricing</h3>
+                        <p>Volume discounts make premium candles accessible for any budget.</p>
+                    </div>
+                    <div class="why-bulk-item fade-up delay-4">
+                        <div class="why-bulk-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <h3>Dedicated Support</h3>
+                        <p>Personal assistance from inquiry to delivery through WhatsApp or email.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="final-cta section">
+            <div class="container">
+                <h2>Ready to Create Something Special?</h2>
+                <p>Whether it's your wedding day or a corporate milestone, we're here to help.</p>
+                <div class="cta-buttons">
+                    <a href="#wedding-inquiry" class="btn btn-primary btn-large">Wedding Inquiry</a>
+                    <a href="#corporate-inquiry" class="btn btn-secondary btn-large">Corporate Inquiry</a>
+                    <a href="https://wa.me/919876543210?text=Hi!%20I'm%20interested%20in%20bulk%20candle%20orders." class="btn btn-outline btn-large" target="_blank">Chat on WhatsApp</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="logo-text">Tiny Flames</span>
+                    <p class="brand-statement">Handcrafted candles made with love. Personalized for the moments that matter.</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Pinterest">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M8 12c0-2.2 1.8-4 4-4s4 1.8 4 4-1.8 4-4 4"></path>
+                                <path d="M12 8v8"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="shop.html">All Candles</a></li>
+                        <li><a href="customize.html">Custom Candles</a></li>
+                        <li><a href="gifts.html">Gift Sets</a></li>
+                        <li><a href="shop.html?occasion=birthday">Birthday Gifts</a></li>
+                        <li><a href="shop.html?occasion=wedding">Wedding Favors</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Bulk Orders</h4>
+                    <ul>
+                        <li><a href="#wedding-inquiry">Wedding Orders</a></li>
+                        <li><a href="#corporate-inquiry">Corporate Gifts</a></li>
+                        <li><a href="#">Event Favors</a></li>
+                        <li><a href="#">Download Catalog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="shipping.html">Shipping & Delivery</a></li>
+                        <li><a href="track-order.html">Track Order</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="our-story.html">Our Story</a></li>
+                        <li><a href="#">Ingredients</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-policies">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="shipping.html">Shipping Policy</a>
+                    <a href="#">Refund Policy</a>
+                </div>
+                <p class="copyright">© 2024 Tiny Flames. All rights reserved.</p>
+                <div class="payment-icons">
+                    <img src="https://img.icons8.com/color/48/visa.png" alt="Visa" width="40">
+                    <img src="https://img.icons8.com/color/48/mastercard.png" alt="Mastercard" width="40">
+                    <img src="https://img.icons8.com/color/48/paypal.png" alt="PayPal" width="40">
+                    <img src="https://img.icons8.com/color/48/google-pay.png" alt="Google Pay" width="40">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919876543210?text=Hi%20Tiny%20Flames!%20I'm%20interested%20in%20bulk%20orders." 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Chat on WhatsApp">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c0-5.45 4.432-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+    </a>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // Form handling
+        document.querySelectorAll('.inquiry-form').forEach(form => {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const formData = new FormData(this);
+                // In real implementation, this would send data to backend
+                alert('Thank you for your inquiry! We will get back to you within 24 hours.');
+                this.reset();
+            });
+        });
+    </script>
+</body>
+</html>

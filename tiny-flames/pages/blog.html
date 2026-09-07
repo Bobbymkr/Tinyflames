@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Tiny Flames</title>
+    <meta name="description" content="Discover candle care tips, scent guides, and inspiration from the Tiny Flames blog.">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .blog-page {
+            padding: 80px 20px 60px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .blog-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .blog-header h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+        .blog-header p {
+            color: #666;
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        .blog-card {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+        }
+        .blog-card-image {
+            height: 220px;
+            background: linear-gradient(135deg, #D97757 0%, #E8A88A 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 80px;
+        }
+        .blog-card-content {
+            padding: 25px;
+        }
+        .blog-category {
+            display: inline-block;
+            padding: 5px 12px;
+            background: #FFF5F2;
+            color: #D97757;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        .blog-card-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 22px;
+            margin: 0 0 12px;
+            line-height: 1.4;
+        }
+        .blog-card-excerpt {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+        .blog-meta {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 13px;
+            color: #999;
+        }
+        .read-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #D97757;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        .read-more:hover {
+            text-decoration: underline;
+        }
+        .blog-sidebar {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 40px;
+        }
+        .sidebar-section {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+        .sidebar-section h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 20px;
+            margin: 0 0 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .category-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .category-list li {
+            margin-bottom: 10px;
+        }
+        .category-list a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 15px;
+            background: #f9f9f9;
+            border-radius: 4px;
+            text-decoration: none;
+            color: #333;
+            transition: background 0.3s;
+        }
+        .category-list a:hover {
+            background: #FFF5F2;
+            color: #D97757;
+        }
+        .newsletter-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .newsletter-form input {
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: 'Inter', sans-serif;
+        }
+        .newsletter-form button {
+            padding: 14px;
+            background: #D97757;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .featured-post {
+            background: linear-gradient(135deg, #D97757 0%, #E8A88A 100%);
+            color: white;
+            border-radius: 8px;
+            padding: 40px;
+            margin-bottom: 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        .featured-content h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 36px;
+            margin: 0 0 15px;
+        }
+        .featured-content p {
+            opacity: 0.9;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+        .featured-btn {
+            display: inline-block;
+            padding: 14px 28px;
+            background: white;
+            color: #D97757;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        .featured-image {
+            font-size: 150px;
+            text-align: center;
+        }
+        @media (max-width: 900px) {
+            .blog-sidebar {
+                grid-template-columns: 1fr;
+            }
+            .featured-post {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 600px) {
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+            .featured-post {
+                padding: 25px;
+            }
+            .featured-content h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-content">
+            <div class="logo">
+                <a href="../index.html">
+                    <h1>Tiny Flames</h1>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="gifts.html">Gifts</a></li>
+                    <li><a href="customize.html">Customize</a></li>
+                    <li><a href="wedding-corporate.html">Wedding & Corporate</a></li>
+                    <li><a href="our-story.html">Our Story</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="currency-selector">$ USD</button>
+                <a href="cart.html" class="cart-icon">🛒 (0)</a>
+                <button class="mobile-menu-toggle">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <h2>Menu</h2>
+            <button class="close-mobile-menu">×</button>
+        </div>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="gifts.html">Gifts</a></li>
+            <li><a href="customize.html">Customize</a></li>
+            <li><a href="wedding-corporate.html">Wedding & Corporate</a></li>
+            <li><a href="our-story.html">Our Story</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Blog Page -->
+    <main class="blog-page">
+        <div class="blog-header">
+            <h1>The Tiny Flames Blog</h1>
+            <p>Candle care tips, scent guides, and inspiration for creating the perfect ambiance in your home.</p>
+        </div>
+
+        <!-- Featured Post -->
+        <article class="featured-post">
+            <div class="featured-content">
+                <span style="background: rgba(255,255,255,0.2); padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: 600;">FEATURED</span>
+                <h2>The Ultimate Guide to Candle Safety</h2>
+                <p>Learn essential safety tips for enjoying your candles responsibly. From proper placement to extinguishing techniques, we cover everything you need to know.</p>
+                <a href="#" class="featured-btn">Read Full Article</a>
+            </div>
+            <div class="featured-image">🕯️</div>
+        </article>
+
+        <div class="blog-sidebar">
+            <div class="blog-main">
+                <div class="blog-grid">
+                    <!-- Blog Post 1 -->
+                    <article class="blog-card">
+                        <div class="blog-card-image">🌿</div>
+                        <div class="blog-card-content">
+                            <span class="blog-category">Scent Guide</span>
+                            <h3 class="blog-card-title">How to Choose the Perfect Scent for Every Room</h3>
+                            <p class="blog-card-excerpt">Discover which fragrances work best in different spaces of your home, from energizing citrus in the kitchen to calming lavender in the bedroom.</p>
+                            <div class="blog-meta">
+                                <span>📅 Sep 5, 2024</span>
+                                <span>👤 By Emma Wilson</span>
+                            </div>
+                            <a href="#" class="read-more">Read More →</a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Post 2 -->
+                    <article class="blog-card">
+                        <div class="blog-card-image">✨</div>
+                        <div class="blog-card-content">
+                            <span class="blog-category">Care Tips</span>
+                            <h3 class="blog-card-title">5 Tips to Make Your Candles Last Longer</h3>
+                            <p class="blog-card-excerpt">Maximize the life of your custom candles with these expert care tips. Learn about proper burning, trimming wicks, and storage.</p>
+                            <div class="blog-meta">
+                                <span>📅 Sep 2, 2024</span>
+                                <span>👤 By Sarah Chen</span>
+                            </div>
+                            <a href="#" class="read-more">Read More →</a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Post 3 -->
+                    <article class="blog-card">
+                        <div class="blog-card-image">💝</div>
+                        <div class="blog-card-content">
+                            <span class="blog-category">Gift Ideas</span>
+                            <h3 class="blog-card-title">Thoughtful Candle Gifts for Every Occasion</h3>
+                            <p class="blog-card-excerpt">From weddings to housewarmings, discover how personalized candles make memorable gifts that show you care.</p>
+                            <div class="blog-meta">
+                                <span>📅 Aug 28, 2024</span>
+                                <span>👤 By Emma Wilson</span>
+                            </div>
+                            <a href="#" class="read-more">Read More →</a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Post 4 -->
+                    <article class="blog-card">
+                        <div class="blog-card-image">🏠</div>
+                        <div class="blog-card-content">
+                            <span class="blog-category">Home Decor</span>
+                            <h3 class="blog-card-title">Creating Cozy Ambiance with Candlelight</h3>
+                            <p class="blog-card-excerpt">Transform your living space into a warm, inviting sanctuary with strategic candle placement and layering techniques.</p>
+                            <div class="blog-meta">
+                                <span>📅 Aug 25, 2024</span>
+                                <span>👤 By Michael Torres</span>
+                            </div>
+                            <a href="#" class="read-more">Read More →</a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Post 5 -->
+                    <article class="blog-card">
+                        <div class="blog-card-image">🌸</div>
+                        <div class="blog-card-content">
+                            <span class="blog-category">Behind the Scenes</span>
+                            <h3 class="blog-card-title">The Art of Hand-Pouring: Our Craftsmanship Process</h3>
+                            <p class="blog-card-excerpt">Go behind the scenes to see how our artisans carefully craft each candle with attention to detail and quality.</p>
+                            <div class="blog-meta">
+                                <span>📅 Aug 20, 2024</span>
+                                <span>👤 By Sarah Chen</span>
+                            </div>
+                            <a href="#" class="read-more">Read More →</a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Post 6 -->
+                    <article class="blog-card">
+                        <div class="blog-card-image">🎉</div>
+                        <div class="blog-card-content">
+                            <span class="blog-category">Events</span>
+                            <h3 class="blog-card-title">Planning a Wedding? Custom Candles as Favors</h3>
+                            <p class="blog-card-excerpt">Explore how personalized candles can serve as beautiful, practical wedding favors your guests will actually use.</p>
+                            <div class="blog-meta">
+                                <span>📅 Aug 15, 2024</span>
+                                <span>👤 By Emma Wilson</span>
+                            </div>
+                            <a href="#" class="read-more">Read More →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="blog-sidebar-content">
+                <div class="sidebar-section">
+                    <h3>Categories</h3>
+                    <ul class="category-list">
+                        <li><a href="#"><span>Scent Guide</span> <span>8</span></a></li>
+                        <li><a href="#"><span>Care Tips</span> <span>12</span></a></li>
+                        <li><a href="#"><span>Gift Ideas</span> <span>10</span></a></li>
+                        <li><a href="#"><span>Home Decor</span> <span>7</span></a></li>
+                        <li><a href="#"><span>Behind the Scenes</span> <span>5</span></a></li>
+                        <li><a href="#"><span>Events</span> <span>6</span></a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>Subscribe to Our Newsletter</h3>
+                    <p style="font-size: 14px; color: #666; margin-bottom: 15px;">Get candle care tips, exclusive offers, and new product announcements delivered to your inbox.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>Popular Posts</h3>
+                    <ul class="category-list">
+                        <li><a href="#">🔥 Candle Safety 101</a></li>
+                        <li><a href="#">🌿 Best Scents for Relaxation</a></li>
+                        <li><a href="#">💡 Wick Trimming Guide</a></li>
+                        <li><a href="#">🎁 Holiday Gift Guide</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h2>Tiny Flames</h2>
+                <p>Hand-poured custom candles that tell your story.</p>
+                <div class="social-icons">
+                    <a href="#">📷</a>
+                    <a href="#">📘</a>
+                    <a href="#">📌</a>
+                    <a href="#">🐦</a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Shop</h3>
+                <ul>
+                    <li><a href="shop.html">All Candles</a></li>
+                    <li><a href="gifts.html">Gifts</a></li>
+                    <li><a href="customize.html">Custom Candles</a></li>
+                    <li><a href="wedding-corporate.html">Bulk Orders</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="shipping.html">Shipping Info</a></li>
+                    <li><a href="track-order.html">Track Order</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="our-story.html">Our Story</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms-of-service.html">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2024 Tiny Flames. All rights reserved.</p>
+            <div class="payment-icons">
+                <span>💳</span>
+                <span>🏦</span>
+                <span>📱</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

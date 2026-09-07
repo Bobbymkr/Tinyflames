@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account | Tiny Flames</title>
+    <meta name="description" content="Manage your Tiny Flames account, view orders, and update preferences.">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .account-page {
+            padding: 80px 20px 60px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .account-header {
+            margin-bottom: 40px;
+        }
+        .account-header h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        .account-grid {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 40px;
+        }
+        .account-sidebar {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            padding: 20px;
+            height: fit-content;
+        }
+        .user-info {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 20px;
+        }
+        .user-avatar {
+            width: 80px;
+            height: 80px;
+            background: #D97757;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            margin: 0 auto 15px;
+        }
+        .user-name {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        .user-email {
+            color: #666;
+            font-size: 14px;
+        }
+        .account-nav {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .account-nav li {
+            margin-bottom: 5px;
+        }
+        .account-nav a {
+            display: block;
+            padding: 12px 15px;
+            color: #333;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+        .account-nav a:hover,
+        .account-nav a.active {
+            background: #FFF5F2;
+            color: #D97757;
+        }
+        .logout-link {
+            color: #D97757 !important;
+        }
+        .account-content {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            padding: 30px;
+        }
+        .content-section {
+            display: none;
+        }
+        .content-section.active {
+            display: block;
+        }
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 24px;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .order-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .order-item {
+            display: grid;
+            grid-template-columns: 150px 1fr 150px 150px;
+            gap: 20px;
+            padding: 20px;
+            border: 1px solid #eee;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            align-items: center;
+        }
+        .order-item:last-child {
+            margin-bottom: 0;
+        }
+        .order-number {
+            font-weight: 600;
+            color: #D97757;
+        }
+        .order-date {
+            color: #666;
+            font-size: 14px;
+        }
+        .order-total {
+            font-weight: 600;
+        }
+        .order-status {
+            padding: 6px 12px;
+            background: #E8F5E9;
+            color: #2E7D32;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            display: inline-block;
+        }
+        .order-status.shipping {
+            background: #FFF3E0;
+            color: #E65100;
+        }
+        .view-order-btn {
+            padding: 8px 16px;
+            background: #D97757;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 13px;
+        }
+        .profile-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+        .form-group label {
+            margin-bottom: 8px;
+            font-weight: 500;
+            font-size: 14px;
+        }
+        .form-group input {
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+        }
+        .save-btn {
+            grid-column: 1 / -1;
+            padding: 14px 30px;
+            background: #D97757;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            align-self: start;
+        }
+        .addresses-list {
+            display: grid;
+            gap: 20px;
+        }
+        .address-card {
+            border: 1px solid #eee;
+            border-radius: 4px;
+            padding: 20px;
+        }
+        .address-card h4 {
+            margin: 0 0 10px;
+            font-family: 'Cormorant Garamond', serif;
+        }
+        .address-card p {
+            margin: 0 0 15px;
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .address-actions {
+            display: flex;
+            gap: 10px;
+        }
+        .address-actions button {
+            padding: 8px 16px;
+            border: 1px solid #ddd;
+            background: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 13px;
+        }
+        .address-actions button.primary {
+            background: #D97757;
+            color: white;
+            border-color: #D97757;
+        }
+        @media (max-width: 900px) {
+            .account-grid {
+                grid-template-columns: 1fr;
+            }
+            .account-sidebar {
+                margin-bottom: 20px;
+            }
+            .order-item {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+        }
+        @media (max-width: 600px) {
+            .profile-form {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-content">
+            <div class="logo">
+                <a href="../index.html">
+                    <h1>Tiny Flames</h1>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="gifts.html">Gifts</a></li>
+                    <li><a href="customize.html">Customize</a></li>
+                    <li><a href="wedding-corporate.html">Wedding & Corporate</a></li>
+                    <li><a href="our-story.html">Our Story</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="currency-selector">$ USD</button>
+                <a href="cart.html" class="cart-icon">🛒 (0)</a>
+                <button class="mobile-menu-toggle">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <h2>Menu</h2>
+            <button class="close-mobile-menu">×</button>
+        </div>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="gifts.html">Gifts</a></li>
+            <li><a href="customize.html">Customize</a></li>
+            <li><a href="wedding-corporate.html">Wedding & Corporate</a></li>
+            <li><a href="our-story.html">Our Story</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Account Dashboard Page -->
+    <main class="account-page">
+        <div class="account-header">
+            <h1>My Account</h1>
+            <p>Manage your profile, orders, and preferences</p>
+        </div>
+
+        <div class="account-grid">
+            <aside class="account-sidebar">
+                <div class="user-info">
+                    <div class="user-avatar">SJ</div>
+                    <div class="user-name">Sarah Johnson</div>
+                    <div class="user-email">sarah@email.com</div>
+                </div>
+                <ul class="account-nav">
+                    <li><a href="#" class="active" data-section="orders">📦 My Orders</a></li>
+                    <li><a href="#" data-section="profile">👤 Profile Settings</a></li>
+                    <li><a href="#" data-section="addresses">🏠 Addresses</a></li>
+                    <li><a href="#" data-section="preferences">⚙️ Preferences</a></li>
+                    <li><a href="#" class="logout-link">🚪 Logout</a></li>
+                </ul>
+            </aside>
+
+            <div class="account-content">
+                <!-- Orders Section -->
+                <div class="content-section active" id="orders">
+                    <h2 class="section-title">Order History</h2>
+                    <ul class="order-list">
+                        <li class="order-item">
+                            <div class="order-number">#TF-12345</div>
+                            <div>
+                                <div class="order-date">September 1, 2024</div>
+                                <div>2 items</div>
+                            </div>
+                            <div class="order-total">$75.59</div>
+                            <div><span class="order-status shipping">In Transit</span></div>
+                            <button class="view-order-btn" onclick="window.location.href='track-order.html'">Track Order</button>
+                        </li>
+                        <li class="order-item">
+                            <div class="order-number">#TF-12289</div>
+                            <div>
+                                <div class="order-date">August 15, 2024</div>
+                                <div>1 item</div>
+                            </div>
+                            <div class="order-total">$38.00</div>
+                            <div><span class="order-status">Delivered</span></div>
+                            <button class="view-order-btn">View Details</button>
+                        </li>
+                        <li class="order-item">
+                            <div class="order-number">#TF-12156</div>
+                            <div>
+                                <div class="order-date">July 22, 2024</div>
+                                <div>3 items</div>
+                            </div>
+                            <div class="order-total">$102.50</div>
+                            <div><span class="order-status">Delivered</span></div>
+                            <button class="view-order-btn">View Details</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Profile Section -->
+                <div class="content-section" id="profile">
+                    <h2 class="section-title">Profile Settings</h2>
+                    <form class="profile-form">
+                        <div class="form-group">
+                            <label>First Name</label>
+                            <input type="text" value="Sarah">
+                        </div>
+                        <div class="form-group">
+                            <label>Last Name</label>
+                            <input type="text" value="Johnson">
+                        </div>
+                        <div class="form-group full-width">
+                            <label>Email Address</label>
+                            <input type="email" value="sarah@email.com">
+                        </div>
+                        <div class="form-group full-width">
+                            <label>Phone Number</label>
+                            <input type="tel" value="+1 (555) 123-4567">
+                        </div>
+                        <button type="submit" class="save-btn">Save Changes</button>
+                    </form>
+                </div>
+
+                <!-- Addresses Section -->
+                <div class="content-section" id="addresses">
+                    <h2 class="section-title">Saved Addresses</h2>
+                    <div class="addresses-list">
+                        <div class="address-card">
+                            <h4>Home</h4>
+                            <p>Sarah Johnson<br>123 Candle Lane<br>New York, NY 10001<br>United States</p>
+                            <div class="address-actions">
+                                <button class="primary">Set as Default</button>
+                                <button>Edit</button>
+                                <button>Delete</button>
+                            </div>
+                        </div>
+                        <div class="address-card">
+                            <h4>Office</h4>
+                            <p>Sarah Johnson<br>456 Business Ave, Suite 200<br>New York, NY 10002<br>United States</p>
+                            <div class="address-actions">
+                                <button>Set as Default</button>
+                                <button>Edit</button>
+                                <button>Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Preferences Section -->
+                <div class="content-section" id="preferences">
+                    <h2 class="section-title">Preferences</h2>
+                    <form class="profile-form">
+                        <div class="form-group full-width">
+                            <label style="display: flex; align-items: center; gap: 10px; padding: 15px; border: 1px solid #ddd; border-radius: 4px;">
+                                <input type="checkbox" checked>
+                                <div>
+                                    <strong>Email Newsletter</strong>
+                                    <p style="margin: 5px 0 0; color: #666; font-size: 13px;">Receive updates on new scents and exclusive offers</p>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="form-group full-width">
+                            <label style="display: flex; align-items: center; gap: 10px; padding: 15px; border: 1px solid #ddd; border-radius: 4px;">
+                                <input type="checkbox" checked>
+                                <div>
+                                    <strong>Order Updates</strong>
+                                    <p style="margin: 5px 0 0; color: #666; font-size: 13px;">Get notified about your order status</p>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="form-group full-width">
+                            <label style="display: flex; align-items: center; gap: 10px; padding: 15px; border: 1px solid #ddd; border-radius: 4px;">
+                                <input type="checkbox">
+                                <div>
+                                    <strong>SMS Notifications</strong>
+                                    <p style="margin: 5px 0 0; color: #666; font-size: 13px;">Receive text messages for important updates</p>
+                                </div>
+                            </label>
+                        </div>
+                        <button type="submit" class="save-btn">Save Preferences</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h2>Tiny Flames</h2>
+                <p>Hand-poured custom candles that tell your story.</p>
+                <div class="social-icons">
+                    <a href="#">📷</a>
+                    <a href="#">📘</a>
+                    <a href="#">📌</a>
+                    <a href="#">🐦</a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Shop</h3>
+                <ul>
+                    <li><a href="shop.html">All Candles</a></li>
+                    <li><a href="gifts.html">Gifts</a></li>
+                    <li><a href="customize.html">Custom Candles</a></li>
+                    <li><a href="wedding-corporate.html">Bulk Orders</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="shipping.html">Shipping Info</a></li>
+                    <li><a href="track-order.html">Track Order</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="our-story.html">Our Story</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms-of-service.html">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2024 Tiny Flames. All rights reserved.</p>
+            <div class="payment-icons">
+                <span>💳</span>
+                <span>🏦</span>
+                <span>📱</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        document.querySelectorAll('.account-nav a[data-section]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const sectionId = this.getAttribute('data-section');
+                
+                // Update nav active state
+                document.querySelectorAll('.account-nav a').forEach(a => a.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Update content section
+                document.querySelectorAll('.content-section').forEach(section => section.classList.remove('active'));
+                document.getElementById(sectionId).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
